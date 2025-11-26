@@ -6,10 +6,11 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 space-y-4">
           <h2 className="text-5xl font-light text-gray-900 tracking-tight">
-            Get in Touch
+            Entre em contato
+
           </h2>
           <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you.
+            Tem alguma dúvida? Adoraríamos ouvi-la.
           </p>
         </div>
 
@@ -21,7 +22,7 @@ export default function Contact() {
                   htmlFor="name"
                   className="block text-sm font-light text-gray-700 mb-2"
                 >
-                  Name
+                  Nome
                 </label>
                 <input
                   type="text"
@@ -51,7 +52,7 @@ export default function Contact() {
                   htmlFor="phone"
                   className="block text-sm font-light text-gray-700 mb-2"
                 >
-                  Phone
+                  Telefone
                 </label>
                 <input
                   type="tel"
@@ -66,7 +67,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-sm font-light text-gray-700 mb-2"
                 >
-                  Message
+                  Mensagem
                 </label>
                 <textarea
                   id="message"
@@ -80,7 +81,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full px-8 py-4 bg-gray-900 text-white font-light text-lg hover:bg-gray-800 transition-colors duration-300"
               >
-                Send Message
+                Enviar Mensagem
               </button>
             </form>
           </div>
@@ -98,30 +99,37 @@ export default function Contact() {
               <div className="flex items-start gap-4">
                 <Phone className="w-6 h-6 text-gray-900 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-light text-gray-900 text-lg mb-1">Phone</p>
-                  <p className="text-gray-600 font-light">+1 (555) 123-4567</p>
+                  <p className="font-light text-gray-900 text-lg mb-1">Telefone</p>
+                  <p className="text-gray-600 font-light">+55 (11) 4002-8922</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-gray-900 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-light text-gray-900 text-lg mb-1">Location</p>
+                  <p className="font-light text-gray-900 text-lg mb-1">Localização</p>
                   <p className="text-gray-600 font-light">
-                    123 Fitness Street<br />
-                    San Francisco, CA 94102<br />
-                    United States
+                    Av. Dr. Adolpho Pinto, 109 <br />
+                    Barra Funda, São Paulo - SP <br />
+                    Brasil
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="h-80 bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 font-light">
-              [Map Placeholder]
+              <div className="relative h-80 rounded-2xl overflow-hidden">
+                <img
+                  src="/mapa.png"
+                  alt="Mapa de entrega/retirada"
+                  className="absolute inset-0 w-full h-full object-cover scale-[1.05]"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
+                <div className="absolute left-0 top-0 w-24 h-24 bg-white rounded-br-[42px]" />
+                <div className="absolute right-6 bottom-6 w-16 h-16 rounded-full bg-white/95 shadow-lg" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
