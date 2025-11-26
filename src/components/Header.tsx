@@ -21,11 +21,11 @@ const Header: React.FC = () => {
   }, [isOpen]);
 
   const menuItems = [
-    { label: "Início", href: "#home" },
-    { label: "Marmitas", href: "#marmita-carousel" },
-    { label: "Estudos de Caso", href: "#case-studies" },
-    { label: "Sobre nós", href: "#about" },
-    { label: "Nosso Time", href: "#team" },
+    { label: "Início", href: "#Hero" },
+    { label: "Marmitas", href: "#Menu" },
+    { label: "Planos", href: "#Plans" },
+    { label: "Sobre nós", href: "#About" },
+    { label: "Nosso Time", href: "#Founders" },
   ];
 
   return (
