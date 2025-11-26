@@ -55,25 +55,33 @@ const Hero: React.FC = () => {
           </div>
 
           {/* CARD STATS */}
-          {/* CARD STATS (menor + animado) */}
-      <div className="hidden md:flex justify-end">
-        <motion.div
-          initial={{ opacity: 0, y: 18, scale: 1 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          whileHover={{ y: -6 }}
-          className="w-full max-w-md bg-white/10 backdrop-blur-md p-5 rounded-xl border border-white/20"
-        >
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: {},
-              show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
-            }}
-            className="space-y-3"
-          >
-            {stats.map((stat) => (
+          <div className="text-white md:pl-16 lg:pl-10 flex items-center justify-center"
+>
+            <motion.div
+              initial={{ opacity: 0, y: 18, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              whileHover={{ y: -6 }}
+              className="
+                w-full max-w-sm
+                bg-white/12 backdrop-blur-md
+                p-5
+                rounded-xl
+                border border-white/25x
+                shadow-[0_20px_60px_rgba(0,0,0,0.25)]
+                -translate-x-6
+              "
+            >
+              <motion.div
+                initial="hidden"
+                animate="show"
+                variants={{
+                  hidden: {},
+                  show: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
+                }}
+                className="space-y-3"
+              >
+                {stats.map((stat) => (
                   <motion.div
                     key={stat.label}
                     variants={{
@@ -82,8 +90,8 @@ const Hero: React.FC = () => {
                     }}
                     className="flex justify-between items-center"
                   >
-                    <span className="text-white/85 text-[20px]">{stat.label}</span>
-                    <span className="font-semibold text-white text-[20px]">{stat.value}</span>
+                    <span className="text-white/90 text-lg">{stat.label}</span>
+                    <span className="text-white font-semibold text-lg">{stat.value}</span>
                   </motion.div>
                 ))}
               </motion.div>
