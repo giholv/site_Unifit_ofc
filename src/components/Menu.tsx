@@ -78,10 +78,10 @@ export default function MenuCarousel() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-14 space-y-3">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight">
-            Our Menu
+            Algumas opções do nosso Menu
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light max-w-2xl mx-auto">
-            Carefully crafted meals designed to fuel your performance
+           Refeições cuidadosamente elaboradas para impulsionar seu desempenho.
           </p>
         </div>
 
