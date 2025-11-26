@@ -21,11 +21,11 @@ const Header: React.FC = () => {
   }, [isOpen]);
 
   const menuItems = [
-    { label: "Início", href: "#Hero" },
-    { label: "Marmitas", href: "#Menu" },
-    { label: "Planos", href: "#Plans" },
-    { label: "Sobre nós", href: "#About" },
-    { label: "Nosso Time", href: "#Founders" },
+    { label: "Início", href: "#home" },
+    { label: "Marmitas", href: "#meals" },
+    { label: "Planos", href: "#plans" },
+    { label: "Sobre nós", href: "#about" },
+    { label: "Nosso Time", href: "#founders" },
   ];
 
   return (
@@ -97,3 +97,5 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
+

@@ -47,7 +47,7 @@ const plans = [
 
 export default function Plans() {
   return (
-    <section className="py-32 px-6 bg-white">
+    <section id="plans" className="py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 space-y-4">
           <h2 className="text-5xl font-light text-gray-900 tracking-tight">

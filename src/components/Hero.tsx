@@ -1,10 +1,11 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Refeições servidas", value: "15k+" },
-  { label: "Campus atendidos", value: "8+" },
-  { label: "Avaliação média", value: "4.9 ★" },
+  { label: "Refeições Servidas", value: "15k+" },
+  { label: "Campus Atendidos", value: "8+" },
+  { label: "Avaliação Média", value: "4.9 ★" },
   { label: "Pratos no menu", value: "40+" },
 ];
 
@@ -54,33 +55,58 @@ const Hero: React.FC = () => {
           </div>
 
           {/* CARD STATS */}
-          <div className="hidden md:block">
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20">
-              <div className="space-y-4">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="flex justify-between items-center">
-                    <span className="text-white/85">{stat.label}</span>
-                    <span className="font-bold text-white">{stat.value}</span>
-                  </div>
+          {/* CARD STATS (menor + animado) */}
+      <div className="hidden md:flex justify-end">
+        <motion.div
+          initial={{ opacity: 0, y: 18, scale: 1 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          whileHover={{ y: -6 }}
+          className="w-full max-w-md bg-white/10 backdrop-blur-md p-5 rounded-xl border border-white/20"
+        >
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+            }}
+            className="space-y-3"
+          >
+            {stats.map((stat) => (
+                  <motion.div
+                    key={stat.label}
+                    variants={{
+                      hidden: { opacity: 0, x: 12 },
+                      show: { opacity: 1, x: 0 },
+                    }}
+                    className="flex justify-between items-center"
+                  >
+                    <span className="text-white/85 text-[20px]">{stat.label}</span>
+                    <span className="font-semibold text-white text-[20px]">{stat.value}</span>
+                  </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      {/* ONDA */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full">
+
+      {/* Onda */}
+      <div className="absolute -bottom-1 left-0 right-0 leading-none">
+        <svg viewBox="0 0 1440 120" className="w-full h-28 md:h-32" preserveAspectRatio="none">
           <path
-            fill="#ffffff"
-            fillOpacity="1"
-            d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+            fill="#f9fafb"
+            d="M0,64 C240,120 480,8 720,40 C960,72 1200,120 1440,64 L1440,120 L0,120 Z"
           />
         </svg>
       </div>
+
     </section>
   );
 };
 
 export default Hero;
+
+
